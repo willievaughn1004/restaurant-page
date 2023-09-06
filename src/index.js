@@ -65,8 +65,23 @@ function createCopy() {
 function createFooter() {
   const footerComponent = buildComponent(
     "footer",
-    "Copyright willievaughn1004"
+    ""
   );
+
+  const copyrightText = buildComponent("div", "Copyright")
+  const githubUsername = buildComponent("div", "willievaughn1004")
+  const copyrightSymbol = buildComponent(
+    "i", "", { class: "fa-regular fa-copyright"}
+  );
+  const githubSymbol = buildComponent(
+    "i", "", { class: "fa-brands fa-github"}
+  );
+  
+  footerComponent.appendChild(copyrightText);
+  footerComponent.appendChild(copyrightSymbol);
+  footerComponent.appendChild(githubUsername);
+  footerComponent.appendChild(githubSymbol);
+
   appendComponent("#content", footerComponent);
 }
 

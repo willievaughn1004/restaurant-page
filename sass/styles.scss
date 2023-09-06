@@ -8,10 +8,6 @@ body {
   height: 100svh;
 }
 
-img {
-  width: 50%;
-}
-
 header,
 .copy,
 footer {
@@ -77,15 +73,30 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex: 1 1 auto;
-  margin: 40px 50px;
-  min-height: 20rem;
+  margin: 3rem 0;
+  max-width: 50rem;
+  padding: 1rem;
+
+  img {
+    width: 50%;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  p {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
 }
 
 footer {
   display: flex;
   justify-content: center;
-  padding-bottom: 1rem;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem;
   width: 100%;
+  font-size: 1.5rem;
 }
