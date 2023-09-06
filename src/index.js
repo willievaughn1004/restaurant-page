@@ -5,7 +5,7 @@ function buildComponent(elem, text, attributes = {}) {
   // Add attributes
   for (const [key, value] of Object.entries(attributes)) {
     element.setAttribute(key, value);
-  };
+  }
 
   return element;
 }
@@ -16,25 +16,31 @@ function appendComponent(targetSelector, component) {
 }
 
 function createHeader() {
-  const headerComponent = buildComponent(
-    "header",
-    "Joe's Pizzaria (We're not a cult)"
-  );
+  const headerComponent = buildComponent("header", "");
+
+  const headerText = buildComponent("div", "Joe's Pizzaria", { class: "headerText" });
+  const headerSubText = buildComponent("div", "(We're not a cult)", { class: "headerSubText" })
+  const links = createNav();
+
+  headerComponent.appendChild(headerText);
+  headerComponent.appendChild(headerSubText);
+  headerComponent.appendChild(links);
+
   appendComponent("#content", headerComponent);
 }
 
 function createNav() {
   const navComponent = buildComponent("nav", "");
 
-  const link1 = buildComponent("a", "Home", { href: "#" });
-  const link2 = buildComponent("a", "Menu", { href: "#" });
-  const link3 = buildComponent("a", "Contact", { href: "#" });
+  const link1 = buildComponent("button", "Home");
+  const link2 = buildComponent("button", "Menu");
+  const link3 = buildComponent("button", "Contact");
 
   navComponent.appendChild(link1);
   navComponent.appendChild(link2);
   navComponent.appendChild(link3);
 
-  appendComponent("#content", navComponent);
+  return navComponent;
 }
 
 function createCopy() {
@@ -43,7 +49,7 @@ function createCopy() {
   const paragraph1 = buildComponent("p", "It started as an obsession");
   const paragraph2 = buildComponent("p", "But became my guiding light");
   const image = buildComponent("img", "", {
-    src: "./img/pizza.webp",
+    src: "./img/pizza-copy.webp",
     alt: "pizza",
   });
   const paragraph3 = buildComponent("p", "Order online, visit us, or join us!");
@@ -65,6 +71,5 @@ function createFooter() {
 }
 
 createHeader();
-createNav();
 createCopy();
 createFooter();
