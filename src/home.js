@@ -1,7 +1,7 @@
 import { buildComponent, appendComponent } from "./components.js";
 
 function createHomeCopy(elem) {
-  const copyHomeComponent = buildComponent("div", "", { class: "copy" });
+  const copyHomeComponent = buildComponent("div", "", { class: "copy-home" });
 
   const paragraph1 = buildComponent("p", "It started as an obsession");
   const paragraph2 = buildComponent("p", "But became my guiding light");

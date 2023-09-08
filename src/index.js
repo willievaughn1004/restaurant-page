@@ -71,21 +71,32 @@ function addPageContent() {
   const menuButton = document.querySelector(".menu");
   const contactButton = document.querySelector(".contact");
 
+  // TODO: Refactor eventListeners to be less big.
   homeButton.addEventListener("click", function () {
     mainContent.innerHTML = "";
+    homeButton.classList.add("border");
+    menuButton.classList.remove("border");
+    contactButton.classList.remove("border");
     createHomeCopy("main");
   });
 
   menuButton.addEventListener("click", function () {
     mainContent.innerHTML = "";
+    homeButton.classList.remove("border");
+    menuButton.classList.add("border");
+    contactButton.classList.remove("border");
     createMenuCopy();
   });
 
   contactButton.addEventListener("click", function () {
     mainContent.innerHTML = "";
+    homeButton.classList.remove("border");
+    menuButton.classList.remove("border");
+    contactButton.classList.add("border");
     createContactCopy();
   });
 
+  homeButton.classList.add("border")
   createHomeCopy("main");
   createFooter();
 }
