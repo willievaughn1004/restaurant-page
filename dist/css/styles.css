@@ -136,9 +136,9 @@ table {
 }
 
 body {
-  background-image: url("/dist/img/pizza-background.webp");
+  background: url("/dist/img/pizza-background.webp") center/cover;
   color: #fff;
-  height: 100svh;
+  min-height: 100svh;
 }
 
 header,
@@ -162,7 +162,8 @@ header {
   padding-top: 2rem;
   width: 100%;
 }
-header div, header nav {
+header div,
+header nav {
   width: 25rem;
   text-align: center;
 }
@@ -186,12 +187,14 @@ header nav button {
   background: none;
   color: white;
   padding: 1rem;
-  border-bottom: solid white 2px;
   cursor: pointer;
   transition: all 0.5s;
 }
 header nav button:hover {
   transform: translateY(-10px);
+}
+header nav .home {
+  border-bottom: solid white 2px;
 }
 
 .copy {
