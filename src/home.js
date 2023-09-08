@@ -11,6 +11,7 @@ function createHomeCopy(elem) {
   });
   const paragraph3 = buildComponent("p", "Order online, visit us, or join us!");
 
+  // Apply upgraded appendComponent function here, if you can
   copyHomeComponent.appendChild(paragraph1);
   copyHomeComponent.appendChild(paragraph2);
   copyHomeComponent.appendChild(image);

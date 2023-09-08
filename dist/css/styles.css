@@ -137,6 +137,7 @@ table {
 
 body {
   background: url("/dist/img/pizza-background.webp") center/cover;
+  background-attachment: fixed;
   color: #fff;
   min-height: 100svh;
 }
@@ -192,16 +193,18 @@ header nav .border {
   border-bottom: solid white 2px;
 }
 
-.copy-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+.main {
+  background-color: rgba(0, 0, 0, 0.7);
   flex: 1 1 auto;
   margin: 3rem 0;
   max-width: 50rem;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.copy-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .copy-home img {
   width: 50%;
