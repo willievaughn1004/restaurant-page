@@ -10,7 +10,10 @@ export const buildComponent = (elem, text, attributes = {}) => {
   return element;
 }
 
-export const appendComponent = (targetSelector, component) => {
-  const content = document.querySelector(targetSelector);
+// FIX: Finish adding functality to this to be able to work with both  
+// dom elements that have and have not been added to the document.
+// Also, finish adding the ability to add more than one item at once.
+export const appendComponent = (targetElement, component) => {
+  const content = document.querySelector(targetElement) || targetElement;
   content.appendChild(component);
 }
