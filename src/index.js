@@ -1,5 +1,7 @@
 import { buildComponent, appendComponent } from "./components.js";
 import createHomeCopy from "./home.js";
+import createMenuCopy from "./menu.js";
+import createContactCopy from "./contact.js";
 
 function createHeader() {
   const headerComponent = buildComponent("header", "");
@@ -34,7 +36,7 @@ function createHeader() {
 }
 
 function createMain() {
-  const mainComponent = buildComponent("main", "", { class: "main"});
+  const mainComponent = buildComponent("main", "", { class: "main" });
 
   appendComponent("#content", mainComponent);
 }
@@ -63,15 +65,25 @@ function addPageContent() {
   createHeader();
   createMain();
 
-
   // Dom Elements
-  const mainContent = document.querySelector(".main")
+  const mainContent = document.querySelector(".main");
   const homeButton = document.querySelector(".home");
   const menuButton = document.querySelector(".menu");
   const contactButton = document.querySelector(".contact");
 
+  homeButton.addEventListener("click", function () {
+    mainContent.innerHTML = "";
+    createHomeCopy("main");
+  });
+
   menuButton.addEventListener("click", function () {
     mainContent.innerHTML = "";
+    createMenuCopy();
+  });
+
+  contactButton.addEventListener("click", function () {
+    mainContent.innerHTML = "";
+    createContactCopy();
   });
 
   createHomeCopy("main");
