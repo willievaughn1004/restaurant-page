@@ -27,7 +27,7 @@ function createMenuCopy(elem) {
   const menuItem8 = "placeholder";
 
 //   FIX: Add ability for components.js to take multiple components as a varible.
-  appendComponent(`${elem}`, menuItem1)
+  appendComponent(`${elem}`, [menuItem1])
 }
 
 export default createMenuCopy;

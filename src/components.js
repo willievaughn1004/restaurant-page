@@ -8,12 +8,19 @@ export const buildComponent = (elem, text, attributes = {}) => {
   }
 
   return element;
-}
+};
 
-// FIX: Finish adding functality to this to be able to work with both  
-// dom elements that have and have not been added to the document.
-// Also, finish adding the ability to add more than one item at once.
-export const appendComponent = (targetElement, component) => {
-  const content = document.querySelector(targetElement) || targetElement;
-  content.appendChild(component);
-}
+export const appendComponent = (targetElement, componentArr) => {
+  let content;
+
+  // Determines whether or not targetElement is already a DOM element.
+  if (typeof targetElement === "string") {
+    content = document.querySelector(targetElement);
+  } else {
+    content = targetElement;
+  }
+
+  for (let i = 0; i < componentArr.length; i++) {
+    content.appendChild(componentArr[i]);
+  }
+};

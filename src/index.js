@@ -14,9 +14,7 @@ function createHeader() {
   });
   const links = createNav();
 
-  headerComponent.appendChild(headerText);
-  headerComponent.appendChild(headerSubText);
-  headerComponent.appendChild(links);
+  appendComponent(headerComponent, [headerText, headerSubText, links]);
 
   function createNav() {
     const navComponent = buildComponent("nav", "");
@@ -32,13 +30,13 @@ function createHeader() {
     return navComponent;
   }
 
-  appendComponent("#content", headerComponent);
+  appendComponent("#content", [headerComponent]);
 }
 
 function createMain() {
   const mainComponent = buildComponent("main", "", { class: "main" });
 
-  appendComponent("#content", mainComponent);
+  appendComponent("#content", [mainComponent]);
 }
 
 function createFooter() {
@@ -53,12 +51,14 @@ function createFooter() {
     class: "fa-brands fa-github",
   });
 
-  footerComponent.appendChild(copyrightText);
-  footerComponent.appendChild(copyrightSymbol);
-  footerComponent.appendChild(githubUsername);
-  footerComponent.appendChild(githubSymbol);
+  appendComponent(footerComponent, [
+    copyrightText,
+    copyrightSymbol,
+    githubUsername,
+    githubSymbol,
+  ]);
 
-  appendComponent("#content", footerComponent);
+  appendComponent("#content", [footerComponent]);
 }
 
 function addPageContent() {
@@ -96,7 +96,7 @@ function addPageContent() {
     createContactCopy();
   });
 
-  homeButton.classList.add("border")
+  homeButton.classList.add("border");
   createHomeCopy("main");
   createFooter();
 }
