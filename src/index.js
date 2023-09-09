@@ -85,7 +85,7 @@ function addPageContent() {
     homeButton.classList.remove("border");
     menuButton.classList.add("border");
     contactButton.classList.remove("border");
-    createHomeCopy("main");
+    createMenuCopy("main");
   });
 
   contactButton.addEventListener("click", function () {

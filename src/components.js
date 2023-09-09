@@ -13,14 +13,14 @@ export const buildComponent = (elem, text, attributes = {}) => {
 export const appendComponent = (targetElement, componentArr) => {
   let content;
 
-  // Determines whether or not targetElement is already a DOM element.
+  // Determines if targetElement is already a DOM element.
   if (typeof targetElement === "string") {
     content = document.querySelector(targetElement);
   } else {
     content = targetElement;
-  }
+  };
 
   for (let i = 0; i < componentArr.length; i++) {
     content.appendChild(componentArr[i]);
-  }
+  };
 };

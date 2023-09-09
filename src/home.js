@@ -11,8 +11,6 @@ function createHomeCopy(elem) {
   });
   const paragraph3 = buildComponent("p", "Order online, visit us, or join us!");
 
-  // Apply upgraded appendComponent function here, if you can
-
   appendComponent(copyHomeComponent, [
     paragraph1,
     paragraph2,

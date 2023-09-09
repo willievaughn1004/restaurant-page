@@ -1,33 +1,42 @@
 import { buildComponent, appendComponent } from "./components.js";
 
 function createMenuCopy(elem) {
-  function createMenuItem(img, header, text) {
-    const copyMenuComponent = buildComponent("div", "", { class: "copy-menu" });
+  const copyMenuComponent = buildComponent("div", "", { class: "copy-menu" });
+
+  function createMenuItem(img, header) {
+    const copyMenuItem = buildComponent("div", "", { class: "menu-item" })
     const createImg = buildComponent("img", "", {
       src: `${img}`,
       alt: "pizza-item",
     });
     const createHeaderText = buildComponent("div", `${header}`);
-    const createParagraphText = buildComponent("div", `${text}`);
 
-    copyMenuComponent.appendChild(createImg);
-    copyMenuComponent.appendChild(createHeaderText);
-    copyMenuComponent.appendChild(createParagraphText);
+    appendComponent(copyMenuItem, [createImg, createHeaderText]);
 
-    return copyMenuComponent;
+    return copyMenuItem;
   }
 
-  const menuItem1 = "placeholder";
-  const menuItem2 = "placeholder";
-  const menuItem3 = "placeholder";
-  const menuItem4 = "placeholder";
-  const menuItem5 = "placeholder";
-  const menuItem6 = "placeholder";
-  const menuItem7 = "placeholder";
-  const menuItem8 = "placeholder";
+  const menuItem1 = createMenuItem("./img/pizza-copy.webp", "Pepperoni");
+  const menuItem2 = createMenuItem("./img/pizza-copy.webp", "Pepperoni");
+  const menuItem3 = createMenuItem("./img/pizza-copy.webp", "Pepperoni");
+  const menuItem4 = createMenuItem("./img/pizza-copy.webp", "Pepperoni");
+  const menuItem5 = createMenuItem("./img/pizza-copy.webp", "Pepperoni");
+  const menuItem6 = createMenuItem("./img/pizza-copy.webp", "Pepperoni");
+  const menuItem7 = createMenuItem("./img/pizza-copy.webp", "Pepperoni");
+  const menuItem8 = createMenuItem("./img/pizza-copy.webp", "Pepperoni");
 
-//   FIX: Add ability for components.js to take multiple components as a varible.
-  appendComponent(`${elem}`, [menuItem1])
+  appendComponent(copyMenuComponent, [
+    menuItem1,
+    menuItem2,
+    menuItem3,
+    menuItem4,
+    menuItem5,
+    menuItem6,
+    menuItem7,
+    menuItem8,
+  ]);
+
+  appendComponent(`${elem}`, [ copyMenuComponent ]);
 }
 
 export default createMenuCopy;
