@@ -93,7 +93,7 @@ function addPageContent() {
     homeButton.classList.remove("border");
     menuButton.classList.remove("border");
     contactButton.classList.add("border");
-    createContactCopy();
+    createContactCopy("main");
   });
 
   homeButton.classList.add("border");

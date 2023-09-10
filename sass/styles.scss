@@ -144,6 +144,23 @@ header {
 
 // Contact
 
+.copy-contact {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  div {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 footer {
   display: flex;
   justify-content: center;

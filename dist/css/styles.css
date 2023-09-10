@@ -242,6 +242,20 @@ header nav .border {
   border-radius: 50%;
 }
 
+.copy-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.copy-contact div {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+.copy-contact img {
+  width: 100%;
+}
+
 footer {
   display: flex;
   justify-content: center;
