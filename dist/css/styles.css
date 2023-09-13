@@ -136,11 +136,11 @@ table {
 }
 
 body {
-  background: url("/dist/img/pizza-background.png") center/cover;
+  background: url("dist/img/pizza-background.png") center/cover;
   background-attachment: fixed;
   color: #fff;
   min-height: 100svh;
-  background-image: url("/dist/img/pizza-background.png");
+  background-image: url("dist/img/pizza-background.png");
 }
 
 #content {
