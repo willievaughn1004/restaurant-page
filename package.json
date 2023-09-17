@@ -2,19 +2,25 @@
   "name": "restaurant-page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
     "build": "webpack"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
-  },
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.2.0",
     "node-sass": "^9.0.0",
-    "sass-loader": "^13.3.2"
+    "sass": "^1.67.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

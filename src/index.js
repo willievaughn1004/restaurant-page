@@ -1,7 +1,11 @@
-import { buildComponent, appendComponent } from "./components.js";
-import createHomeCopy from "./home.js";
-import createMenuCopy from "./menu.js";
-import createContactCopy from "./contact.js";
+import "./scss/styles.scss";
+import {
+  buildComponent,
+  appendComponent,
+} from "./components/componentfunctions.js";
+import createHomeCopy from "./components/home.js";
+import createMenuCopy from "./components/menu.js";
+import createContactCopy from "./components/contact.js";
 
 function createHeader() {
   const headerComponent = buildComponent("header", "");
